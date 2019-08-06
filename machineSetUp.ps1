@@ -1,23 +1,23 @@
-﻿## Install chocolatey
-#Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-#write-host "Chocolatey installed"
-#
-#Set-ExecutionPolicy unrestricted
-## Postman block
-##Download
-#$Postmanurl = "https://dl.pstmn.io/download/latest/win64"
-#$postoutpath = "$PSScriptRoot/PostmanSetup.exe"
-#Invoke-WebRequest -Uri $Postmanurl -OutFile $postoutpath
-##Install
-#$args = @("Comma","Separated","Arguments")
-#write-host "Installing Postman"
-#Start-Process -Filepath "$PSScriptRoot/PostmanSetup.exe" -ArgumentList $args
-#write-host "Postman Installed"
-#
-#
-## gitbash block
-#choco install git -params '"/GitAndUnixToolsOnPath"'
-#write-host "Git Installed"
+﻿# Install chocolatey
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+write-host "Chocolatey installed"
+
+Set-ExecutionPolicy unrestricted
+# Postman block
+#Download
+$Postmanurl = "https://dl.pstmn.io/download/latest/win64"
+$postoutpath = "$PSScriptRoot/PostmanSetup.exe"
+Invoke-WebRequest -Uri $Postmanurl -OutFile $postoutpath
+#Install
+$args = @("Comma","Separated","Arguments")
+write-host "Installing Postman"
+Start-Process -Filepath "$PSScriptRoot/PostmanSetup.exe" -ArgumentList $args
+write-host "Postman Installed"
+
+
+# gitbash block
+choco install git -params '"/GitAndUnixToolsOnPath"'
+write-host "Git Installed"
 
 
 #Desktop image block
